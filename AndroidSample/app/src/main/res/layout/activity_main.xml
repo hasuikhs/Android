@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackgroud"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button1"
+            android:id="@+id/btn1"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button2"
+            android:id="@+id/btn2"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button3"
+            android:id="@+id/btn3"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button4"
+            android:id="@+id/btn4"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button5"
+            android:id="@+id/btn5"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button6"
+            android:id="@+id/btn6"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ANR(Application Not Responding)"
+            android:id="@+id/btn7"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Counter App(실행에러)"
+            android:id="@+id/btn8"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Counter App(Handler)"
+            android:id="@+id/btn9"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="도서 검색 및 출력"
+            android:id="@+id/btn10"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="일일 박스오피스 순위"
+            android:id="@+id/btn11"
+            android:padding="10px"/>
+    </LinearLayout>
+</ScrollView>

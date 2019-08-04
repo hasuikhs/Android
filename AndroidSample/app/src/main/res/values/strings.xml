@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AndroidSample</string>
+    <string name="button1">LinearLayout Example</string>
+    <string name="button2">Chatting Activity Example</string>
+    <string name="button3">Image처리 Activity Example</string>
+    <string name="button4">Touch Event Activity Example</string>
+    <string name="button5">Activity 간의 데이터 전달</string>
+    <string name="button6">다른 Activity로 부터 데이터 받기</string>
+
+    <string name="toastMsg">Activity Touch</string>
+
+    <string name="linbutton1">BUTTON 1</string>
+    <string name="linbutton2">BUTTON 2</string>
+    <string name="linbutton3">BUTTON 3</string>
+    <string name="linbutton4">BUTTON 4</string>
+
+    <string name="textview1">TextView 1</string>
+    <string name="textview2">TextView 2</string>
+    <string name="textview3">TextView 3</string>
+    <string name="textview4">TextView 4</string>
+</resources>
