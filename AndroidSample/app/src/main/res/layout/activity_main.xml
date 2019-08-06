@@ -83,5 +83,20 @@
             android:text="일일 박스오피스 순위"
             android:id="@+id/btn11"
             android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="도서검색(CUSTOM)"
+            android:id="@+id/btn12"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Implicit Intent(묵시적 인탠트)"
+            android:id="@+id/btn13"
+            android:padding="10px"/>
+
     </LinearLayout>
 </ScrollView>

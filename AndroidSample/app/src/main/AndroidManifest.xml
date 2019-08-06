@@ -3,6 +3,8 @@
     package="com.example.androidsample">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BoxOfficeRankActivity"></activity>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="90cb5eabf5e34f4b3fbbf2ebec953322" />
+
+        <activity android:name=".KAKAOMAPActivity"></activity>
+        <activity android:name=".ImplicitIntentTestActivity">
+            <intent-filter>
+                <action android:name="MY_ACTION" />
+
+                <category android:name="MY_CATEGORY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IntentTestActivity" />
+        <activity android:name=".CustomBookSearchActivity" />
+        <activity android:name=".BoxOfficeRankActivity" />
         <activity android:name=".BookSearchActivity" />
         <activity android:name=".CounterActivity" />
         <activity android:name=".NoCounterActivity" />

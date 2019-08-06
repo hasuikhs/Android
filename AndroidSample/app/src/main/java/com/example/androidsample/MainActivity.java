@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // btn9 : Event Source
+        // btn10 : Event Source
         Button btn10 = (Button)findViewById(R.id.btn10);
         // 익명 내부 클래스
         btn10.setOnClickListener(new View.OnClickListener(){
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // btn9 : Event Source
+        // btn11 : Event Source
         Button btn11 = (Button)findViewById(R.id.btn11);
         // 익명 내부 클래스
         btn11.setOnClickListener(new View.OnClickListener(){
@@ -197,6 +197,35 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent();
                 ComponentName cname = new ComponentName("com.example.androidsample",
                         "com.example.androidsample.BoxOfficeRankActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+        // btn12 : Event Source
+        Button btn12 = (Button)findViewById(R.id.btn12);
+        // 익명 내부 클래스
+        btn12.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidsample",
+                        "com.example.androidsample.CustomBookSearchActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+        // btn12 : Event Source
+        Button btn13 = (Button)findViewById(R.id.btn13);
+        // 익명 내부 클래스
+        btn13.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                // 명시적 인텐트(Explicit Intent)
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidsample",
+                        "com.example.androidsample.IntentTestActivity");
                 i.setComponent(cname);
                 startActivity(i);
             }
