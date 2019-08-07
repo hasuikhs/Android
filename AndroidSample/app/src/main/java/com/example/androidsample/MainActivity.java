@@ -231,6 +231,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Button serviceStartBtn = (Button)findViewById(R.id.serviceStartBtn);
+        serviceStartBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+               // 서비스 객체를 실행
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidsample",
+                             "com.example.androidsample.LifeCycleService");
+                i.setComponent(cname);
+                i.putExtra("ActivityToServiceData", "소리없는 아우성!!");
+                // 서비스 클래스를 찾아서 객체화 시키고 실행
+                startService(i);
+            }
+        });
+
+        Button serviceStopBtn = (Button)findViewById(R.id.serviceStopBtn);
+        serviceStopBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                // 서비스 객체를 종료
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidsample",
+                        "com.example.androidsample.LifeCycleService");
+                i.setComponent(cname);
+                stopService(i);
+            }
+        });
+
+
     }
 
     @Override
@@ -240,5 +270,12 @@ public class MainActivity extends AppCompatActivity {
             String result = data.getExtras().getString("DATA");
             Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        String msg = intent.getExtras().getString("ServiceToActivityData");
+        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
     }
 }

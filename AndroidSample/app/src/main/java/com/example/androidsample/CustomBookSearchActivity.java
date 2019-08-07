@@ -111,9 +111,6 @@ public class CustomBookSearchActivity extends AppCompatActivity {
                 for(BookVO vo : list){
                     adapter.addItem(vo);
                 }
-
-
-
             }
         };
 

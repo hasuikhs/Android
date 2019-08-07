@@ -48,14 +48,19 @@ class SearchMovieRankRunnable implements Runnable{
             while ((input = br.readLine()) != null){
                 sb.append(input);
             }
+            br.close();
 
             // JSON 문자열을 String[] 형태로변환하는 코드
             ObjectMapper mapper = new ObjectMapper();
 
-            String[] resultArr = mapper.readValue(sb.toString(), String[].class);
+            MovieVO[] resultArr = mapper.readValue(sb.toString(), MovieVO[].class);
+
+            for(MovieVO vo : resultArr){
+
+            }
 
             Bundle bundle = new Bundle();
-            bundle.putStringArray("MOVIEARRAY", resultArr);
+            bundle.putSerializable("MOVIEARRAY", resultArr);
 
             Message msg = new Message();
             msg.setData(bundle);
@@ -78,17 +83,22 @@ public class BoxOfficeRankActivity extends AppCompatActivity {
         Button searchDateBtn = (Button)findViewById(R.id.searchRankBtn);
         final EditText dateEt = (EditText)findViewById(R.id.dateEt);
         final ListView movieList= (ListView)findViewById(R.id.movieList);
-
         final Handler handler = new Handler(){
             @Override
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
-                Bundle bundle =msg.getData();
-                String[] result = bundle.getStringArray("MOVIEARRAY");
 
-                ArrayAdapter adapter = new ArrayAdapter(BoxOfficeRankActivity.this,
-                                                        android.R.layout.simple_list_item_1, result);
+                Bundle bundle = msg.getData();
+                MovieVO[] list = (MovieVO[]) bundle.getSerializable("MOVIES");
+
+                MovieListViewAdapter adapter = new MovieListViewAdapter();
+
                 movieList.setAdapter(adapter);
+
+                // adapter에 그려야하는 데이터를 세팅
+                for(MovieVO vo : list){
+                    adapter.addItem(vo);
+                }
             }
         };
 

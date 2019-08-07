@@ -13,12 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".LifeCycleService"
+            android:enabled="true"
+            android:exported="true"></service>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="90cb5eabf5e34f4b3fbbf2ebec953322" />
 
-        <activity android:name=".KAKAOMAPActivity"></activity>
+        <activity android:name=".KAKAOMAPActivity" />
         <activity android:name=".ImplicitIntentTestActivity">
             <intent-filter>
                 <action android:name="MY_ACTION" />

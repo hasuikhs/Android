@@ -98,5 +98,27 @@
             android:id="@+id/btn13"
             android:padding="10px"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Service 시작"
+                android:id="@+id/serviceStartBtn"
+                android:padding="10px"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Service 중지"
+                android:id="@+id/serviceStopBtn"
+                android:padding="10px"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
