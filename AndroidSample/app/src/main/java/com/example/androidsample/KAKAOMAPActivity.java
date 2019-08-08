@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
+/* 카카오 맵을 이용하기 위해선 manifast xml 파일에 설정 추가 */
 
 public class KAKAOMAPActivity extends AppCompatActivity {
 
