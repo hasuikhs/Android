@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +15,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MyContactActivity">
+            <intent-filter>
+                <action android:name="Contact_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.test.data"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".DatabaseSampleActivity">
+            <intent-filter>
+                <action android:name="START_DATABASE_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BroadcastTestActivity">
+            <intent-filter>
+                <action android:name="START_BROADCAST_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BoxOfficeActivity" />
+
         <service
             android:name=".LifeCycleService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
@@ -33,7 +64,6 @@
         </activity>
         <activity android:name=".IntentTestActivity" />
         <activity android:name=".CustomBookSearchActivity" />
-        <activity android:name=".BoxOfficeRankActivity" />
         <activity android:name=".BookSearchActivity" />
         <activity android:name=".CounterActivity" />
         <activity android:name=".NoCounterActivity" />

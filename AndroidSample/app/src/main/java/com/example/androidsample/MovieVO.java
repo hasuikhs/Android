@@ -8,6 +8,7 @@ public class MovieVO {
     private String movieCd;
     private String movieNm;
     private String openDt;
+    private String salesAmt;
     private String salesShare;
     private String salesInten;
     private String salesChange;
@@ -16,12 +17,12 @@ public class MovieVO {
     private String audiInten;
     private String audiChange;
     private String audiAcc;
-    private String sdrnCnt;
+    private String scrnCnt;
     private String showCnt;
 
     public MovieVO(){}
 
-    public MovieVO(String rnum, String rank, String rankInten, String rankOldAndNew, String movieCd, String movieNm, String openDt, String salesShare, String salesInten, String salesChange, String salesAcc, String audiCnt, String audiInten, String audiChange, String audiAcc, String sdrnCnt, String showCnt) {
+    public MovieVO(String rnum, String rank, String rankInten, String rankOldAndNew, String movieCd, String movieNm, String openDt, String salesAmt, String salesShare, String salesInten, String salesChange, String salesAcc, String audiCnt, String audiInten, String audiChange, String audiAcc, String scrnCnt, String showCnt) {
         this.rnum = rnum;
         this.rank = rank;
         this.rankInten = rankInten;
@@ -29,6 +30,7 @@ public class MovieVO {
         this.movieCd = movieCd;
         this.movieNm = movieNm;
         this.openDt = openDt;
+        this.salesAmt = salesAmt;
         this.salesShare = salesShare;
         this.salesInten = salesInten;
         this.salesChange = salesChange;
@@ -37,7 +39,7 @@ public class MovieVO {
         this.audiInten = audiInten;
         this.audiChange = audiChange;
         this.audiAcc = audiAcc;
-        this.sdrnCnt = sdrnCnt;
+        this.scrnCnt = scrnCnt;
         this.showCnt = showCnt;
     }
 
@@ -95,6 +97,14 @@ public class MovieVO {
 
     public void setOpenDt(String openDt) {
         this.openDt = openDt;
+    }
+
+    public String getSalesAmt() {
+        return salesAmt;
+    }
+
+    public void setSalesAmt(String salesAmt) {
+        this.salesAmt = salesAmt;
     }
 
     public String getSalesShare() {
@@ -161,12 +171,12 @@ public class MovieVO {
         this.audiAcc = audiAcc;
     }
 
-    public String getSdrnCnt() {
-        return sdrnCnt;
+    public String getScrnCnt() {
+        return scrnCnt;
     }
 
-    public void setSdrnCnt(String sdrnCnt) {
-        this.sdrnCnt = sdrnCnt;
+    public void setScrnCnt(String scrnCnt) {
+        this.scrnCnt = scrnCnt;
     }
 
     public String getShowCnt() {

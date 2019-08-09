@@ -188,20 +188,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // btn11 : Event Source
-        Button btn11 = (Button)findViewById(R.id.btn11);
-        // 익명 내부 클래스
-        btn11.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent();
-                ComponentName cname = new ComponentName("com.example.androidsample",
-                        "com.example.androidsample.BoxOfficeRankActivity");
-                i.setComponent(cname);
-                startActivity(i);
-            }
-        });
-
         // btn12 : Event Source
         Button btn12 = (Button)findViewById(R.id.btn12);
         // 익명 내부 클래스
@@ -259,6 +245,50 @@ public class MainActivity extends AppCompatActivity {
                 stopService(i);
             }
         });
+
+        Button searchBoxOfficeBtn = (Button)findViewById(R.id.searchBoxOfficeBtn);
+        searchBoxOfficeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidsample",
+                        "com.example.androidsample.BoxOfficeActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+        Button btn14 = (Button)findViewById(R.id.btn14);
+        btn14.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+               Intent i = new Intent();
+               i.setAction("START_BROADCAST_ACTIVITY");
+               startActivity(i);
+            }
+        });
+
+        Button btn15 = (Button)findViewById(R.id.btn15);
+        btn15.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent();
+                i.setAction("START_DATABASE_ACTIVITY");
+                startActivity(i);
+            }
+        });
+
+        Button btn16 = (Button)findViewById(R.id.btn16);
+        btn16.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent();
+                i.setAction("Contact_ACTIVITY");
+                startActivity(i);
+            }
+        });
+
+
 
 
     }

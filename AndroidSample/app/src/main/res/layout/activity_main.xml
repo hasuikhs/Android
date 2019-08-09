@@ -77,14 +77,7 @@
             android:id="@+id/btn10"
             android:padding="10px"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="일일 박스오피스 순위"
-            android:id="@+id/btn11"
-            android:padding="10px"/>
-
-        <Button
+         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="도서검색(CUSTOM)"
@@ -120,5 +113,34 @@
                 android:layout_weight="1"/>
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="일일 박스오피스"
+            android:id="@+id/searchBoxOfficeBtn"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Broadcast Sample Activity"
+            android:id="@+id/btn14"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SQLite Sample Activity"
+            android:id="@+id/btn15"
+            android:padding="10px"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="주소록"
+            android:id="@+id/btn16"
+            android:padding="10px"/>
+
     </LinearLayout>
 </ScrollView>
