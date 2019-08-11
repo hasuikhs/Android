@@ -227,9 +227,12 @@ public class KAKAOBooKVO implements Parcelable {
             con.connect();
             InputStream is = con.getInputStream();
             bmp = BitmapFactory.decodeStream(is);
+            // url을 bimap로 변환 후
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bmp.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+            // bitmap을 stream으로 넘겨줌
             thumbnailImg = stream.toByteArray();
+            // stream을 byte[]로 
         } catch (Exception e){
             Log.i("KAKAOBOOKLog", e.toString());
         }
