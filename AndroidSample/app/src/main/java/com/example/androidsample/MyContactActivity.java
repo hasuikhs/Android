@@ -34,7 +34,7 @@ public class MyContactActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // 보안관련 코드를 작성
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                    // 6버전보다 높은 경우
+                    // 6버전보다 높은 경우 버전에 따라 권한 접근의 종류에 따른 경우가 다르므로 유의할 것
                     if (checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED){
                         // 이전에 허용을 한적이 없는 경우
                         // 사용자의 허가를 얻어야 함
