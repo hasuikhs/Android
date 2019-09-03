@@ -56,5 +56,3 @@
 
    - Broadcast Receiver는 Broadcast를 청취하는 component
    - Broadcast Receiver는 사용자와의 대면은 하지 않음
-
-4. #### 
