@@ -44,7 +44,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
 
             String channelName ="매일 알람 채널";
-            String description = "매일 정해진 시간에 알람합니다.";
+            String description = "매일 정해진 시간에 찾아올거야";
             int importance = NotificationManager.IMPORTANCE_HIGH; //소리와 알림메시지를 같이 보여줌
 
             NotificationChannel channel = new NotificationChannel("default", channelName, importance);
@@ -62,8 +62,8 @@ public class AlarmReceiver extends BroadcastReceiver {
                 .setWhen(System.currentTimeMillis())
 
                 .setTicker("{Time to watch some cool stuff!}")
-                .setContentTitle("상태바 드래그시 보이는 타이틀")
-                .setContentText("상태바 드래그시 보이는 서브타이틀")
+//                .setContentTitle("운동가자")
+                .setContentText("운동 갈 시간이야!")
                 .setContentInfo("INFO")
                 .setContentIntent(pendingI);
 
@@ -82,9 +82,9 @@ public class AlarmReceiver extends BroadcastReceiver {
             editor.putLong("nextNotifyTime", nextNotifyTime.getTimeInMillis());
             editor.apply();
 
-            Date currentDateTime = nextNotifyTime.getTime();
-            String date_text = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일 a hh시 mm분 ", Locale.getDefault()).format(currentDateTime);
-            Toast.makeText(context.getApplicationContext(),"다음 알람은 " + date_text + "으로 알람이 설정되었습니다!", Toast.LENGTH_SHORT).show();
+//            Date currentDateTime = nextNotifyTime.getTime();
+//            String date_text = new SimpleDateFormat("EE요일 a hh시 mm분 ", Locale.getDefault()).format(currentDateTime);
+//            Toast.makeText(context.getApplicationContext(),"다음 운동시간은 " + date_text + "이야! 힘내보자!", Toast.LENGTH_SHORT).show();
         }
     }
 }

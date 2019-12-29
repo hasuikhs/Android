@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         nextNotifyTime.setTimeInMillis(millis);
 
         Date nextDate = nextNotifyTime.getTime();
-        String date_text = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일 a hh시 mm분 ", Locale.getDefault()).format(nextDate);
-        Toast.makeText(getApplicationContext(),"[처음 실행시] 다음 알람은 " + date_text + "으로 알람이 설정되었습니다!", Toast.LENGTH_SHORT).show();
+        String date_text = new SimpleDateFormat("hh시 mm분 ", Locale.getDefault()).format(nextDate);
+        Toast.makeText(getApplicationContext(), date_text + "에 운동할까?", Toast.LENGTH_SHORT).show();
 
 
         // 이전 설정값으로 TimePicker 초기화
@@ -104,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Date currentDateTime = calendar.getTime();
-                String date_text = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일 a hh시 mm분 ", Locale.getDefault()).format(currentDateTime);
-                Toast.makeText(getApplicationContext(),date_text + "으로 알람이 설정되었습니다!", Toast.LENGTH_SHORT).show();
+                String date_text = new SimpleDateFormat("EE요일 a hh시 mm분", Locale.getDefault()).format(currentDateTime);
+                Toast.makeText(getApplicationContext(),date_text + "에 보자!", Toast.LENGTH_SHORT).show();
 
                 //  Preference에 설정한 값 저장
                 SharedPreferences.Editor editor = getSharedPreferences("daily alarm", MODE_PRIVATE).edit();

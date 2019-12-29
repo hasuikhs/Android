@@ -42,8 +42,8 @@ public class DeviceBootReceiver extends BroadcastReceiver {
             }
 
             Date currentDateTime = nextNotifyTime.getTime();
-            String date_text = new SimpleDateFormat("yyyy년 MM월 dd일 EE요일 a hh시 mm분 ", Locale.getDefault()).format(currentDateTime);
-            Toast.makeText(context.getApplicationContext(),"[재부팅후] 다음 알람은 " + date_text + "으로 알람이 설정되었습니다!", Toast.LENGTH_SHORT).show();
+            String date_text = new SimpleDateFormat("EE요일 a hh시 mm분 ", Locale.getDefault()).format(currentDateTime);
+            Toast.makeText(context.getApplicationContext(),"다음 운동 시간은 " + date_text + "에 하는 것으로!", Toast.LENGTH_SHORT).show();
 
 
             if (manager != null) {
